@@ -1,0 +1,42 @@
+/* components/header.css */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: var(--color-primary);
+	color: var(--color-white);
+}
+
+.header__logo img {
+	height: 40px;
+}
+
+.header__logo--large img {
+	height: 60px;
+}
+
+.header__nav {
+	/* ナビゲーションスタイル */
+}
+
+.header__menu {
+	list-style: none;
+	display: flex;
+	gap: 15px;
+	margin: 0;
+	padding: 0;
+}
+
+.header__menu-item {
+}
+
+.header__menu-link {
+	color: var(--color-white);
+	text-decoration: none;
+	font-size: var(--font-size-base);
+}
+
+.header__menu-link:hover {
+	text-decoration: underline;
+}

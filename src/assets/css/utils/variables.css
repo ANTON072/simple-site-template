@@ -1,0 +1,10 @@
+:root {
+	--color-primary: #007bff;
+	--color-secondary: #6c757d;
+	--color-white: #ffffff;
+	--color-gray: #f8f9fa;
+
+	/* フォントサイズの変数 */
+	--font-size-base: 16px;
+	--font-size-large: 1.5em;
+}

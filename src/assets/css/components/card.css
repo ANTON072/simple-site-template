@@ -1,0 +1,31 @@
+/* components/card.css */
+.card {
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 20px;
+	background-color: var(--color-white);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card__title {
+	font-size: var(--font-size-large);
+	margin-bottom: 10px;
+}
+
+.card__description {
+	font-size: var(--font-size-base);
+	margin-bottom: 15px;
+}
+
+.card__button {
+	/* Card内のボタンスタイル */
+}
+
+.card--featured {
+	border-color: var(--color-primary);
+	background-color: rgba(0, 123, 255, 0.1); /* var(--color-primary)の薄い色 */
+}
+
+.card--featured .card__title {
+	color: var(--color-primary);
+}

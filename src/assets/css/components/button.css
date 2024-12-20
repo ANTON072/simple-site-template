@@ -1,0 +1,33 @@
+/* components/button.css */
+.button {
+	display: inline-flex;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: var(--color-gray);
+	color: var(--color-white);
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: var(--font-size-base);
+	transition: background-color 0.3s ease;
+	text-decoration: none;
+}
+
+.button__icon {
+	margin-right: 8px;
+}
+
+.button:hover {
+	background-color: rgba(248, 249, 250, 0.8); /* var(--color-gray) を少し暗く */
+}
+
+.button--primary {
+	background-color: var(--color-primary);
+}
+
+.button--primary:hover {
+	background-color: darken(
+		var(--color-primary),
+		10%
+	); /* CSSでは関数が使えないため、手動で色を指定 */
+}
