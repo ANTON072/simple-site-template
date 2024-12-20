@@ -1,0 +1,15 @@
+{
+	"core": "https://ja.wordpress.org/latest-ja.zip",
+	"phpVersion": null,
+	"plugins": [],
+	"themes": ["./wp-theme"],
+	"port": 8888,
+	"testsPort": 8889,
+	"config": {
+		"WP_ENV": "development",
+		"WP_DEBUG": true,
+		"WP_DEBUG_LOG": true
+	},
+	"mappings": {},
+	"mysqlPort": null
+}
