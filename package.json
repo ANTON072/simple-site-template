@@ -1,0 +1,15 @@
+{
+	"name": "corporate-site-template",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build:11ty": "eleventy"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"prettier": "^3.4.2"
+	}
+}
