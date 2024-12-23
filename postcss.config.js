@@ -1,8 +1,6 @@
-module.exports = {
-	plugins: [
-		require("postcss-import"),
-		require("postcss-csso")({
-			restructure: false,
-		}),
-	],
+import postcssImport from "postcss-import";
+import postcssPresetEnv from "postcss-preset-env";
+
+export default {
+	plugins: [postcssImport(), postcssPresetEnv()],
 };

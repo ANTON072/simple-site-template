@@ -1,5 +1,6 @@
 {
 	"name": "corporate-site-template",
+	"type": "module",
 	"engines": {
 		"node": ">=22.0.0"
 	},
@@ -7,9 +8,9 @@
 		"wp-env": "wp-env",
 		"prebuild": "npm run clean",
 		"build": "run-p build:*",
+		"build:rollup": "rollup -c",
 		"build:11ty": "eleventy",
 		"build:assets": "node -e \"require('fs').cpSync('./src/assets', './wp_theme/dist', {recursive: true})\"",
-		"build:css": "postcss src/assets/css/main.css -o wp_theme/dist/bundle.css",
 		"watch": "npm run build && run-p watch:*",
 		"watch:assets": "onchange \"./src/assets/**/*\" -- npm run build:assets",
 		"watch:css": "onchange \"./src/assets/css/**/*\" -- npm run build:css",
@@ -18,15 +19,18 @@
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^3.0.0",
+		"@rollup/plugin-node-resolve": "^16.0.0",
+		"@rollup/plugin-terser": "^0.4.4",
 		"@wordpress/env": "^10.14.0",
 		"browser-sync": "^3.0.3",
 		"npm-run-all": "^4.1.5",
 		"onchange": "^7.1.0",
 		"postcss": "^8.4.49",
-		"postcss-cli": "^11.0.0",
-		"postcss-csso": "^6.0.1",
 		"postcss-import": "^16.1.0",
+		"postcss-preset-env": "^10.1.2",
 		"prettier": "^3.4.2",
-		"rimraf": "^6.0.1"
+		"rimraf": "^6.0.1",
+		"rollup": "^4.29.1",
+		"rollup-plugin-postcss": "^4.0.2"
 	}
 }
