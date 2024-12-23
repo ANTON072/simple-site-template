@@ -24,10 +24,11 @@ export default [
 			terser(),
 			copy({
 				targets: [
-					{ src: "src/assets/media/**/*", dest: "dist/assets/media" },
-					{ src: "src/assets/media/**/*", dest: "wp_theme/dist/media" },
+					{
+						src: "src/assets/media/**/*",
+						dest: ["dist/assets/media", "wp_theme/dist/media"],
+					},
 				],
-				// `hook`オプションを使用してビルド後に実行
 				hook: "writeBundle",
 			}),
 		],
