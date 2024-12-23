@@ -1,4 +1,9 @@
 export default function (eleventyConfig) {
+	// assets以下をdistにコピー
+	eleventyConfig.addPassthroughCopy({
+		"src/assets": "assets",
+	});
+
 	return {
 		dir: {
 			input: "src/njk",
