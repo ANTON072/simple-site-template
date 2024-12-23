@@ -2,28 +2,49 @@
 import resolve from "@rollup/plugin-node-resolve";
 import terser from "@rollup/plugin-terser";
 import postcss from "rollup-plugin-postcss";
+import copy from "rollup-plugin-copy";
 
 export default [
 	{
-		input: "src/assets/js/main.js", // エントリーポイント
-		output: {
-			file: "dist/assets/js/bundle.js", // 出力ファイル
-			format: "iife", // 即時実行関数形式
-			sourcemap: true, // ソースマップの生成
-		},
+		input: "src/assets/js/main.js",
+		output: [
+			{
+				file: "dist/assets/js/bundle.js",
+				format: "iife",
+				sourcemap: true,
+			},
+			{
+				file: "wp_theme/dist/js/bundle.js", // 出力ファイル
+				format: "iife",
+				sourcemap: true,
+			},
+		],
 		plugins: [
-			resolve(), // モジュール解決
-			terser(), // JavaScriptの最小化
+			resolve(),
+			terser(),
+			copy({
+				targets: [
+					{ src: "src/assets/media/**/*", dest: "dist/assets/media" },
+					{ src: "src/assets/media/**/*", dest: "wp_theme/dist/media" },
+				],
+				// `hook`オプションを使用してビルド後に実行
+				hook: "writeBundle",
+			}),
 		],
 	},
 	{
 		input: "src/assets/css/main.css",
-		output: {
-			file: "dist/assets/css/bundle.css",
-		},
+		output: [
+			{
+				file: "dist/assets/css/main.css",
+			},
+			{
+				file: "wp_theme/dist/css/main.css",
+			},
+		],
 		plugins: [
 			postcss({
-				extract: "bundle.css", // 出力ファイル名
+				extract: "main.css",
 				minimize: true,
 				sourceMap: true,
 			}),

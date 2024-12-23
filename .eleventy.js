@@ -1,12 +1,9 @@
-module.exports = function (eleventyConfig) {
-	// パスの短縮やエイリアスの設定が必要な場合はここで設定
-
+export default function (eleventyConfig) {
 	// 静的アセットのコピー
-	eleventyConfig.addPassthroughCopy({
-		"src/assets": "/assets",
-	});
+	// eleventyConfig.addPassthroughCopy({
+	// 	"src/assets": "/assets",
+	// });
 
-	// テンプレートエンジンの設定（例: Nunjucks）
 	return {
 		dir: {
 			input: "src/njk",
@@ -16,4 +13,4 @@ module.exports = function (eleventyConfig) {
 		},
 		passthroughFileCopy: true,
 	};
-};
+}

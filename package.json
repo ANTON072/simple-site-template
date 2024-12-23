@@ -10,7 +10,6 @@
 		"build": "run-p build:*",
 		"build:rollup": "rollup -c",
 		"build:11ty": "eleventy",
-		"build:assets": "node -e \"require('fs').cpSync('./src/assets', './wp_theme/dist', {recursive: true})\"",
 		"watch": "npm run build && run-p watch:*",
 		"watch:assets": "onchange \"./src/assets/**/*\" -- npm run build:assets",
 		"watch:css": "onchange \"./src/assets/css/**/*\" -- npm run build:css",
@@ -31,6 +30,7 @@
 		"prettier": "^3.4.2",
 		"rimraf": "^6.0.1",
 		"rollup": "^4.29.1",
+		"rollup-plugin-copy": "^3.5.0",
 		"rollup-plugin-postcss": "^4.0.2"
 	}
 }
