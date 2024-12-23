@@ -10,7 +10,8 @@
 		"build": "run-p build:*",
 		"build:rollup": "rollup -c",
 		"build:11ty": "eleventy",
-		"start": "browser-sync start --config bs-config.js",
+		"dev:11ty": "eleventy --serve",
+		"browser-sync": "browser-sync start --config bs-config.js",
 		"clean": "rimraf dist && rimraf wp_theme/dist"
 	},
 	"devDependencies": {
