@@ -7,3 +7,31 @@
 
 「HTMLはマークアップエンジニアに依頼したい」といったケースのために、11tyでHTMLテンプレートを開発する機能も含んでいます。  
 `src` 以下がそのためのディレクトリですが、assetsディレクトリは `wp_theme/assets` からのシンボリックリンクになっています。マークアップエンジニアとWordPress開発者で同じアセットファイルを参照することができます。
+
+## WordPressテーマの開発
+
+[wp-env](https://ja.wordpress.org/team/handbook/block-editor/reference-guides/packages/packages-env/)を利用しています。
+
+```sh
+# 依存ライブラリのインストール
+npm i
+# WordPressの起動
+npm run wp-env start
+# BrowserSyncの起動（オプション）
+npm run browser-sync
+```
+
+`wp_theme` ディレクトリ以下で開発します。
+
+## HTMLテンプレートの開発（マークアップエンジニア向け）
+
+[eleventy](https://www.11ty.dev/)を利用しています。
+
+```sh
+# 依存ライブラリのインストール
+npm i
+# 11tyの起動
+npm run dev:11ty
+```
+
+`html_template` 以下で開発します。
