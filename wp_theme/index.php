@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/main.css">
+	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<?php wp_head(); ?>
 </head>
 <body>
 	<header class="header">
@@ -16,6 +16,6 @@
 	<footer>
 		<h3>フッター</h3>
 	</footer>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js"></script>
+	<?php wp_footer(); ?>
 </body>
 </html>
