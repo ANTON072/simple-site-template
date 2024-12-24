@@ -5,18 +5,18 @@ import postcss from "rollup-plugin-postcss";
 
 export default [
 	{
-		input: "wp_theme/assets/js/main.js",
+		input: "wp-content/my-theme/assets/js/main.js",
 		output: {
-			file: "wp_theme/dist/bundle.js",
+			file: "wp-content/my-theme/dist/bundle.js",
 			format: "iife",
 			sourcemap: true,
 		},
 		plugins: [resolve(), terser()],
 	},
 	{
-		input: "wp_theme/assets/css/main.css",
+		input: "wp-content/my-theme/assets/css/main.css",
 		output: {
-			file: "wp_theme/dist/bundle.css",
+			file: "wp-content/my-theme/dist/bundle.css",
 		},
 		plugins: [
 			postcss({
