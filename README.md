@@ -29,9 +29,9 @@ npm run browser-sync
 
 ```sh
 # export
-npm run wp-env cli wp db export /var/www/html/database.sql
+npm run db:export
 # import
-npm run wp-env cli wp db import database.sql
+npm run db:import
 ```
 
 ## HTMLテンプレートの開発（マークアップエンジニア向け）
