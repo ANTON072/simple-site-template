@@ -23,6 +23,17 @@ npm run browser-sync
 
 `wp_theme` ディレクトリ以下で開発します。
 
+### データベースのexportとimport
+
+以下のコマンドで可能です。
+
+```sh
+# export
+npm run wp-env cli wp db export /var/www/html/database.sql
+# import
+npm run wp-env cli wp db import database.sql
+```
+
 ## HTMLテンプレートの開発（マークアップエンジニア向け）
 
 [eleventy](https://www.11ty.dev/)を利用しています。

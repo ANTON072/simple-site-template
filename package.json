@@ -13,7 +13,9 @@
 		"dev:11ty": "eleventy --serve",
 		"browser-sync": "browser-sync start --config bs-config.js",
 		"clean": "rimraf dist && rimraf wp_theme/dist",
-		"format": "prettier --write ./wp-content/my-theme/**/*"
+		"format": "prettier --write ./wp-content/my-theme/**/*",
+		"db:export": "wp-env run cli wp db export ./seed/seed.sql",
+		"db:import": "wp-env run cli wp db import ./seed/seed.sql"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^3.0.0",
