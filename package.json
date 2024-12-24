@@ -16,6 +16,7 @@
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^3.0.0",
+		"@prettier/plugin-php": "^0.22.2",
 		"@rollup/plugin-node-resolve": "^16.0.0",
 		"@rollup/plugin-terser": "^0.4.4",
 		"@wordpress/env": "^10.14.0",

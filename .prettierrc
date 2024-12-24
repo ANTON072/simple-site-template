@@ -1,3 +1,4 @@
 {
-	"prettier.useEditorConfig": true
+	"prettier.useEditorConfig": true,
+	"plugins": ["@prettier/plugin-php"]
 }
