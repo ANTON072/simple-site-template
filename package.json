@@ -12,7 +12,8 @@
 		"build:11ty": "eleventy",
 		"dev:11ty": "eleventy --serve",
 		"browser-sync": "browser-sync start --config bs-config.js",
-		"clean": "rimraf dist && rimraf wp_theme/dist"
+		"clean": "rimraf dist && rimraf wp_theme/dist",
+		"format": "prettier --write ./wp-content/my-theme/**/*"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^3.0.0",
